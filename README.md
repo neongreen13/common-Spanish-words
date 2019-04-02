@@ -14,13 +14,15 @@ Pop culture found in music and film are an excellent way to learn listening comp
 
 Second, it will download lyrics from 2018 Latin songs from Genius.com and put into a dataframe for text analysis. 
 
-# Step 3 - Text Analysis
+# Step 3 - Text Analysis - 
 Initial text analysis has been performed on a sample of four Latin song lyrics. 
 
-Text analysis includes two phases: using SpaCy Spanish to divide the lyrics into categories of nouns, verbs, pronouns, and stopwords. 
-Add text analysis stiff here ...
-- word count, word clouds, sharts or frequencies, vector features, plotting data
+Text analysis includes two phases: the first runs descriptive statistics on the lyrics and identifies the the word count, unique word count, and their frequencies. The second phase uses SpaCy Spanish to divide the lyrics into various parts of speech, including nouns, verbs, pronouns, stopwords, etc. It also lemmatizes the verbs down to their root form and drop duplicates.
 
-# Step 4 - Data Visualization
+# Data Visualization
+Data visualizations are displayed at variosu stages. 
+- Under the sons list, the most influencial artists are displayed and compared by number of top songs in matplotlib and seaborn.
+- Under text analysis, the SpaCy parts of speech tagger has a biult-in display for the words within the lyrics. 
+- Under text analysis, each parts of speech have been displayed in Word Clouds.
 
 # Conclusion and Applications for Spanish Learners
