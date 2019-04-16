@@ -18,10 +18,10 @@ Initial text analysis has been performed on a sample of four Latin song lyrics.
 Text analysis includes two phases: the first runs descriptive statistics on the lyrics and identifies the the word count, unique word count, and their frequencies. The second phase uses SpaCy Spanish to divide the lyrics into various parts of speech, including nouns, verbs, pronouns, stopwords, etc. It also lemmatizes the verbs down to their root form and drop duplicates.
 
 # Data Visualization
-Data visualizations are displayed at variosu stages. 
-- Under the sons list, the most influencial artists are displayed and compared by number of top songs in matplotlib and seaborn.
-- Under text analysis, the SpaCy parts of speech tagger has a biult-in display for the words within the lyrics. 
-- Under text analysis, each parts of speech have been displayed in Word Clouds.
+Data visualizations are displayed at various stages. 
+- Under the songs list, the most influencial artists are displayed and compared by number of top songs in matplotlib and seaborn.
+- Under text analysis, the SpaCy parts of speech tagger has a biult-in display for the types of words (nouns, verbs, stopwords, etc) within the lyrics. 
+- Under text analysis, each part of speech have been displayed in a separate Word Cloud.
 
 # Conclusion and Applications for Spanish Learners
 - This section will be concluded after all the lyrics have been compiled from Genius.com.
