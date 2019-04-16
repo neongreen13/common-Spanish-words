@@ -10,7 +10,7 @@ Identify a list of 250 common Spanish words to form a hypothesis. The Spanish wo
 - https://www.amazon.com/Frequency-Dictionary-Spanish-Vocabulary-Dictionaries/dp/0415334292 
 
 # Step 2 - Collecting the Data - Song List Notebook
-Pop culture found in music and film are an excellent way to learn listening comprehension as well as expand one's vocabulary when learning a language. Examining Latin music lyrics will test the hypothesis. Latin song lyrics is more readily available as opposed to film scripts). The data collection phase, first, consists of downloading a list top Latin songs from Billboard.com. 
+Pop culture found in music and film are an excellent way to learn listening comprehension as well as expand one's vocabulary when learning a language. Examining Latin music lyrics will test the hypothesis. Latin song lyrics is more readily available (as opposed to film scripts). The data collection phase, first, consists of downloading a list top Latin songs from Billboard.com. 
 
 Second, it will download lyrics from 2018 Latin songs from Genius.com and put into a dataframe for text analysis. 
 
