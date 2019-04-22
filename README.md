@@ -33,4 +33,7 @@ Data visualizations are displayed at various stages.
 # Conclusion and Applications for Spanish Learners
 - This section will be concluded after all the lyrics have been compiled from Genius.com.
 
-Thank you!
+# Further Analysis (Forthcoming)
+1. The SpaCy parts of speech tagger had errors, particularly with compound words that are more frequent in Spanish. It also did not exclude English words or numbers. Overall, the lyrics dataset needs further cleaning by creating a machine learning algorithm to detect the current errors and train a new model to be deployed on the lyrics dataset. 
+
+2. While the initial project was to analyze word frequencies, parts of speech, and come up with a list of commmon words, this project could be taken a step further. A second machine learning model could be created for Spanish to test and validate the sentiment in the lyrics, and compare the sentiment to the other Spanish word corpora. 
