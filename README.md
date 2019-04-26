@@ -6,7 +6,9 @@ With thousands of words, the thought of learning another language can be dauntin
 
 # Hypothesis 
 Identify a list of Spanish words to form the basis of comparison. The initial 250 Spanish words list was taken from an online Spanish learning dictionary that reflects a classroom taught vocaulary list. As a secondary test, two more word corpora were taken from Wikipidia. 
+
 The first is an abbreviated list of top 100 words that was compiled by the Real Academia Española (RAE) to form a  Reference Corpus of Current Spanish. It contains 160 million word forms and was taken from books, magazines, and newspapers with a wide variety of content, as well as transcripts of spoken language from radio and television broadcasts and other sources (published in June 2008). 
+
 The second was created by Mark Davies at Brigham Young University in 2006. This corpus contains 20 million words compiled from 20th-century sources. About one-third (~6,750,000 words) come from transcripts of spoken Spanish: conversations, interviews, lectures, sermons, press conferences, sports broadcasts, and so on. Notebook listed below.
 - https://github.com/yellow11marie/common-Spanish-words/blob/master/Spanish_Key_Updated.ipynb
 
@@ -18,14 +20,11 @@ The second pahses consisted of downloading the lyrics for all Latin songs from G
 - https://github.com/yellow11marie/common-Spanish-words/blob/master/Lyrics_Genius_All.ipynb
 
 # Text Cleaning 
--describe what i did here ...
-Initial text analysis has been performed on a sample of four Latin song lyrics. 
+From the dataset of songs, the text was cleaned and processed. Initial descriptive statistics were run, rendering a list of 26,977 Spanish words found in 1,054 songs from 2006 to 2018. Next, the lyrics were separated into the different parts of speech using a national language processor, SpaCy, to identify nouns, verbs, pronouns, stopwords, etc. SpaCy was also used to lemmatize the nouns and verbs. Lemmatization is the process of reducing nouns to their singular form, thus dropping the plural form as a duplicate, and retaining only the root infinitive verb by discarding various conjugations.
 
-Text analysis includes two phases: the first runs descriptive statistics on the lyrics and identifies the the word count, unique word count, and their frequencies. The second phase uses SpaCy Spanish to divide the lyrics into various parts of speech, including nouns, verbs, pronouns, stopwords, etc. It also lemmatizes the verbs down to their root form and drop duplicates.
 - https://github.com/yellow11marie/common-Spanish-words/blob/master/Spanish_Words_Dataset.ipynb 
 
 # Analysis of Findings
-
 Qualitative Review of List Comparison:
    - There are only 105 word similarities between the 250 Lyrics corpus and the original 250 Spanish key and 149 word differences. Based on word frequency, the lists are not very similar. 
    - The Lyrics corpus had to be cleaned to exclude English words, numbers, proper names, and some slang. This corpus did not include lemmatized nouns and verbs, thus containing similar and/or repatiitve words and meanings. The Lyrics corpus also contains a handful of nouns that refer to sex, love, and relationships (as was expected and supports the hypothesis). For exmaple, heart, love, lips, body, kiss, mouth, bed, etc. This accounted for roughly 25 of the 149 difference in the Lyrics corpus (16.7%).
@@ -40,7 +39,7 @@ Data visualizations are displayed at various stages.
 - Under the songs list, the most influencial artists are displayed and compared by number of top songs in matplotlib and seaborn.
 - Under text analysis, the SpaCy parts of speech tagger has a biult-in display for the types of words (nouns, verbs, stopwords, etc) within the lyrics. 
 - Under text cleaning, each part of speech are displayed in a separate Word Cloud.
-- Under Analysis, the common Spanish words are disaplyed in bar charts. 
+- Under analysis, the common Spanish words are disaplyed in bar charts. 
 
 # Conclusion and Applications for Spanish Learners
 Updated Hypothesis:
