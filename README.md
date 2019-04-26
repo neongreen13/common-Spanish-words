@@ -24,14 +24,33 @@ Text analysis includes two phases: the first runs descriptive statistics on the 
 
 # Analysis of Findings
 
+Qualitative Review of List Comparison:
+   - There are only 105 word similarities between the 250 Lyrics corpus and the original 250 Spanish key and 149 word differences. Based on word frequency, the lists are not very similar. 
+   - The Lyrics corpus had to be cleaned to exclude English words, numbers, proper names, and some slang. This corpus did not include lemmatized nouns and verbs, thus containing similar and/or repatiitve words and meanings. The Lyrics corpus also contains a handful of nouns that refer to sex, love, and relationships (as was expected and supports the hypothesis). For exmaple, heart, love, lips, body, kiss, mouth, bed, etc. This accounted for roughly 25 of the 149 difference in the Lyrics corpus (16.7%).
+   - What was excluded from the Spanish key were primarily verbs. The Spanish key included 56 verbs out of the 147 word difference (38%) that were not present in the 250 word Lyrics corpus. This supports the hypothesis that the Spanish key was compiled from/for a classroom-style learning format. 
+   - When the two Spanish word corpora were compared, out of 100 words, the two lists contianed 34 different words (34% or 1/3 of the lists). Comparing the differences was more revealing than the similarities. The Spanish word corpus 1 did not have its verbs lemmatized into the infinitive form, thus containing multiple tenses and conjugations. The Spanish word corpus 2 contained only verb infinitives, and 22 of the 36 differences were verb infinitives (61% or two thirds). 
+   - Comparing the 100 word Lyrics corpus to the Spanish word corpus 1, thw two lists had 59 similarities. The main differences were nouns, same as mentioned above. Interestingly, the Spanish word corpus 1 had nouns such as government and country, words found in the news or formal writing. 
+   - The 100 word Lyrics corpus was less similar to the Spanish word corpus 2, containing 49 similarities. 
+- add notebook link
+
 # Data Visualization
 Data visualizations are displayed at various stages. 
 - Under the songs list, the most influencial artists are displayed and compared by number of top songs in matplotlib and seaborn.
 - Under text analysis, the SpaCy parts of speech tagger has a biult-in display for the types of words (nouns, verbs, stopwords, etc) within the lyrics. 
-- Under text analysis, each part of speech have been displayed in a separate Word Cloud.
+- Under text cleaning, each part of speech are displayed in a separate Word Cloud.
+- Under Analysis, the common Spanish words are disaplyed in bar charts. 
 
 # Conclusion and Applications for Spanish Learners
-- This section will be concluded after all the lyrics have been compiled from Genius.com.
+Updated Hypothesis:
+- Compiling lyrics will render a useful set of 250-300 most commonly used Spanish words 
+    - >UPDATED: The Lyrics corpus is useful but should be combined with the other corpora to form a comprehensive list of 500 common Spanish words. 
+- The assumption is that the lyrics corpus will have limitations, namely that it does not include nouns that are esential for traveling - ordering food, transportation, greetings, etc. These topics will need to be learned in addition to the list if traveling to a Spanish speaking country, but not necessarily relevant to having a conversation with a Spanish speaker. 
+    - >UPDATED: True, but when combined with the classroom corpus more topics are covered. Additional nouns would be beneficial for travel, but not necessarily in conversations with Spanish speakers.
+- The lyrics corpus will have a greater percent of words related to love, sex, and relationships, as that its often the topic of songs. 
+    - >UPDATED: True. This remains important as conversational topic. 
+    
+RESULT:
+- Start studying the 500 Spanish word list today to become conversationally fluent in no time.
 
 # Further Analysis (Forthcoming)
 1. The SpaCy parts of speech tagger had errors, particularly with compound words that are more frequent in Spanish. It also did not exclude English words or numbers. Overall, the lyrics dataset needs further cleaning by creating a machine learning algorithm to detect the current errors and train a new model to be deployed on the lyrics dataset. 
