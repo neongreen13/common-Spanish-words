@@ -31,7 +31,7 @@ Qualitative Review of List Comparison:
    - When the two Spanish word corpora were compared, out of 100 words, the two lists contianed 34 different words (34% or 1/3 of the lists). Comparing the differences was more revealing than the similarities. The Spanish word corpus 1 did not have its verbs lemmatized into the infinitive form, thus containing multiple tenses and conjugations. The Spanish word corpus 2 contained only verb infinitives, and 22 of the 36 differences were verb infinitives (61% or two thirds). 
    - Comparing the 100 word Lyrics corpus to the Spanish word corpus 1, thw two lists had 59 similarities. The main differences were nouns, same as mentioned above. Interestingly, the Spanish word corpus 1 had nouns such as government and country, words found in the news or formal writing. 
    - The 100 word Lyrics corpus was less similar to the Spanish word corpus 2, containing 49 similarities. 
-- add notebook link
+- https://github.com/yellow11marie/common-Spanish-words/blob/master/Spanish_Analysis.ipynb
 
 # Data Visualization
 Data visualizations are displayed at various stages. 
