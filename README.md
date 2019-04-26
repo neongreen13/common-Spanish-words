@@ -53,7 +53,7 @@ Updated Hypothesis:
 RESULT:
 - Start studying the 500 Spanish word list today to become conversationally fluent in no time.
 
-# Further Analysis (Forthcoming)
-1. The SpaCy parts of speech tagger had errors, particularly with compound words that are more frequent in Spanish. It also did not exclude English words or numbers. Overall, the lyrics dataset needs further cleaning by creating a machine learning algorithm to detect the current errors and train a new model to be deployed on the lyrics dataset. 
+# Further Analysis
+1. The SpaCy parts of speech tagger had errors, particularly with compound words that are more frequently found in Spanish than English. It also did not exclude English or Portuguese words or numbers. The lyrics dataset required additional cleaning, which could be achieved by creating a machine learning algorithm to detect the current errors and train a new model to be deployed on the lyrics dataset. This was not essential to complete the project, as the 500 word list could be cleaned by hand in a more expedient manner than creating a learning model. However, for future projects a new model for SpaCy Spanish could be useful.
 
-2. While the initial project was to analyze word frequencies, parts of speech, and come up with a list of commmon words, this project could be taken a step further. A second machine learning model could be created for Spanish to test and validate the sentiment in the lyrics, and compare the sentiment to the other Spanish word corpora. 
+2. While the initial project was to analyze word frequencies, parts of speech, and come up with a list of commmon words, a spin-off project could be undertaken on the meaning of the lyrics. Sentiment analysis is common in data science for English text analysis. A second machine learning model could be created for Spanish to test and validate the sentiment in the lyrics, namely polarity and subjectivity. 
