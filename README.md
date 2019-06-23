@@ -47,10 +47,10 @@ The findings from the comparison are as follows:
 
 Next, the project compared the value counts of the separate parts of speech to the total Lyrics word corpus. 
 
-- 26,977 total words in the lyrics corpus. When divided into the parts of speech, SpaCy returns 25,211 words.
-- 9,960 lemmatized nouns, 6,729 lemmatized verbs, 7,850 adverbs and adjectives, 424 pronouns, and 248 conjunctives.
-- Nouns represent 39.5% of the total words, 24.9% are verbs, 29.1% adverbs and adjectives, 1.6% are pronouns, 0.9% are conjunctives.
-- Of a list continuing 250 words, the share of nouns would be 99, 63 verbs, 73 adverbs and adjectives, 4 pronouns, and 2 conjunctives. 
+- 26,977 total words in the lyrics corpus, 26,106 without English stopwrods. When divided into the parts of speech, SpaCy returns 26,000 words.
+- 9,843 lemmatized nouns, 6,705 lemmatized verbs, 8,022 ads, 733 stopwrods, 445 pronouns, 252 conjs
+- Nouns are 37.85%, 25.78 verbs, 30.85 ads, 2.8 stopwords, 1.7 pronouns, .9 conjs
+- Of a list continaing 500 words, the share of nouns would be 189.25, 128.9 verbs, 154.25 adverbs and adjectives, 14 stopwords, 8.5 pronouns, and 4.5 conjunctives.
 - The share of the total are displayed in a Seaborn chart.
 
 - https://github.com/yellow11marie/common-Spanish-words/blob/master/Spanish_Analysis.ipynb
@@ -65,14 +65,14 @@ The project uses data visualizations at various stages and can be found in the f
 # Conclusion and Applications for Spanish Learners
 Updated Hypothesis:
 - Compiling lyrics will render a useful set of 250-300 most commonly used Spanish words 
-    - >UPDATED: The Lyrics corpus is useful but should be combined with the other corpora to form a comprehensive list of 500 common Spanish words. 
+    - >UPDATED: The Lyrics corpus was expanded to a comprehensive list of 500 common Spanish words roken down into lemmatized nouns, lemmatized verbs, stopwords, pronouns, adjectives and adverbs, and conjuctions by their percent frequency found in the total lyrics word corpus.  
 - The assumption is that the lyrics corpus will have limitations, namely that it does not include nouns that are esential for traveling - ordering food, transportation, greetings, etc. These topics will need to be learned in addition to the list if traveling to a Spanish speaking country, but not necessarily relevant to having a conversation with a Spanish speaker. 
-    - >UPDATED: True, but when combined with the classroom corpus more topics are covered. Additional nouns would be beneficial for travel, but not necessarily in conversations with Spanish speakers.
+    - >UPDATED: True. Additional nouns would be beneficial for travel, but not necessarily in conversations with Spanish speakers.
 - The lyrics corpus will have a greater percent of words related to love, sex, and relationships, as that its often the topic of songs. 
     - >UPDATED: True. This remains important as conversational topic. 
     
 RESULT:
-- Start studying the 500 Spanish word list today to become conversationally fluent in no time.
+- Start studying the 500 Spanish word list today.
 
 # Further Analysis
 1. The SpaCy parts of speech tagger had errors, particularly with compound words that are more frequently found in Spanish than English. For example, the word ‘dimelo’—translation: give it to me—was tagged as a noun. It also did not exclude English or Portuguese words or numbers. The lyrics dataset required additional cleaning, which could be achieved by creating a machine learning algorithm to detect the current errors and train a new model to be deployed on the lyrics dataset. This was not essential to complete the project, as the 500 word list could be cleaned by hand in a more expedient manner than creating a learning model. However, for future projects a new model for SpaCy Spanish would be useful.
