@@ -28,15 +28,18 @@ The second phase of data collection consisted of downloading the lyrics for all 
 # Text Cleaning 
 From the dataset of song lyrics, the project cleaned and processed the lyrics text for analysis. It performed initial descriptive statistics on the lyrics and returned the number of capitalized words, numerals, word count, unique word count, and character count for each song. In a column for clean lyrics, the project removed punctuation and made the words lower case. This preprocessing makes working with text data easier and uniform.
 
-From all 1,056 songs, the dataset returned a list of 26,977 Spanish words in total to form the basis of this project’s Spanish word corpus. 
+From all 1,056 songs, the dataset returned a list of 26,106 Spanish words in total to form the basis of this project’s Spanish word corpus. 
 
-Next, the project separated the lyrics into the different parts of speech using a national language processor, SpaCy, to identify nouns, verbs, pronouns, stop words, etc. SpaCy was also used to lemmatize the nouns and verbs. Lemmatization is the process of reducing nouns to their singular form, thus dropping the plural form as a duplicate, and retaining only the root infinitive verb by discarding various conjugations. The project ran value counts on each part of speech and rendered 6,729 lemmatized verbs (down from 10,264 verb forms), 9,960 lemmatized nouns (down from 11,231), 7,850 adverbs and adjectives, 424 pronouns, 741 stop words, and 248 conjunctives. Separate word clouds display the word list for each part of speech. 
+Next, the project separated the lyrics into the different parts of speech using a national language processor, SpaCy, to identify nouns, verbs, pronouns, stop words, etc. SpaCy was also used to lemmatize the nouns and verbs. Lemmatization is the process of reducing nouns to their singular form, thus dropping the plural form as a duplicate, and retaining only the root infinitive verb by discarding various conjugations. The project ran value counts on each part of speech and rendered 6,705 lemmatized verbs (down from 10,264 verb forms), 9,843 lemmatized nouns (down from 11,110), 8,022 adverbs and adjectives, 733 stop words, 445 pronouns, and 252 conjunctives. Separate word clouds display the word list for each part of speech. 
 - https://github.com/yellow11marie/common-Spanish-words/blob/master/Spanish_Words_Dataset.ipynb 
 
 # Analysis of Findings
-The project compares an abbreviated list of 250 Spanish words created from lyrics to the 250-word Spanish key and both 100-word Spanish corpora from Wikipedia. The project returned each dataset into a bog of words for side by side comparison and returned similarities and differences. 
+The project compared an abbreviated list of 100, 250, and 500 Spanish word lists created from lyrics to the 250-word Spanish key and both 100-word Spanish corpora from Wikipedia. The project returned each dataset into a bog of words for side by side comparison and returned similarities and differences. 
 
-The findings from the comparison are as follows:
+Highlights:
+- 
+
+Detailed findings from comparing word corpora:
 
 - There were only 105 word similarities between the 250 Lyrics corpus and the original 250 Spanish key. Stop words were not removed. Based on word frequency, the lists were not very similar.
 - The Lyrics corpus had to be cleaned to exclude English words, numbers, and artist names. This corpus did not include lemmatized nouns and verbs, thus containing similar and/or repetitive word forms. The Lyrics corpus also contained a handful of nouns that refer to sex, love, and relationships. For example, heart, love, lips, body, kiss, mouth, bed, etc. These words accounted for 25 of the 149 word differences between the Lyrics corpus and Spanish key (16.7%).
@@ -45,11 +48,11 @@ The findings from the comparison are as follows:
 - Comparing a second abbreviated 100-word Lyrics corpus to the first Spanish word corpus from Wikipedia, the two lists had 59 similarities. The main differences were nouns, same as mentioned above. Interestingly, the first Spanish word corpus had nouns such as government and country, words found in the news or formal writing.
 - The 100-word Lyrics corpus was less similar to the second Spanish word corpus, containing only 49 similarities.
 
-Next, the project compared the value counts of the separate parts of speech to the total Lyrics word corpus. 
+Based on the word corpus found in song lyrics, the project compiled a list of 500 words based on the percent distribution of the different parts of speech. The share of words are as follows:
 
-- 26,977 total words in the lyrics corpus, 26,106 without English stopwrods. When divided into the parts of speech, SpaCy returns 26,000 words.
-- 9,843 lemmatized nouns, 6,705 lemmatized verbs, 8,022 ads, 733 stopwrods, 445 pronouns, 252 conjs
-- Nouns are 37.85%, 25.78 verbs, 30.85 ads, 2.8 stopwords, 1.7 pronouns, .9 conjs
+- 26,977 total words in the lyrics corpus, 26,106 without English stopwords. When divided into the parts of speech, SpaCy returns 26,000 words.
+- 9,843 lemmatized nouns, 6,705 lemmatized verbs, 8,022 ads, 733 stopwrods, 445 pronouns, and 252 conjs.
+- Nouns are 37.85%, 25.78% verbs, 30.85% ads, 2.8% stopwords, 1.7% pronouns, and 0.9% conjs.
 - Of a list continaing 500 words, the share of nouns would be 189.25, 128.9 verbs, 154.25 adverbs and adjectives, 14 stopwords, 8.5 pronouns, and 4.5 conjunctives.
 - The share of the total are displayed in a Seaborn chart.
 
@@ -65,17 +68,21 @@ The project uses data visualizations at various stages and can be found in the f
 # Conclusion and Applications for Spanish Learners
 Updated Hypothesis:
 - Compiling lyrics will render a useful set of 250-300 most commonly used Spanish words 
-    - >UPDATED: The Lyrics corpus was expanded to a comprehensive list of 500 common Spanish words roken down into lemmatized nouns, lemmatized verbs, stopwords, pronouns, adjectives and adverbs, and conjuctions by their percent frequency found in the total lyrics word corpus.  
+    - >UPDATED: The Lyrics corpus was expanded to a comprehensive list of 500 common Spanish words broken down into lemmatized nouns, lemmatized verbs, stopwords, pronouns, adjectives and adverbs, and conjuctions by their percent frequency found in the total lyrics word corpus.  
 - The assumption is that the lyrics corpus will have limitations, namely that it does not include nouns that are esential for traveling - ordering food, transportation, greetings, etc. These topics will need to be learned in addition to the list if traveling to a Spanish speaking country, but not necessarily relevant to having a conversation with a Spanish speaker. 
-    - >UPDATED: True. Additional nouns would be beneficial for travel, but not necessarily in conversations with Spanish speakers.
+    - >UPDATED: True. Additional nouns would be beneficial for travel, but not essential in everyday conversations with Spanish speakers.
 - The lyrics corpus will have a greater percent of words related to love, sex, and relationships, as that its often the topic of songs. 
-    - >UPDATED: True. This remains important as conversational topic. 
+    - >UPDATED: True. This remains important as a conversational topic. 
     
 RESULT:
 - Start studying the 500 Spanish word list today.
 
 # Further Analysis
-1. The SpaCy parts of speech tagger had errors, particularly with compound words that are more frequently found in Spanish than English. For example, the word ‘dimelo’—translation: give it to me—was tagged as a noun. It also did not exclude English or Portuguese words or numbers. The lyrics dataset required additional cleaning, which could be achieved by creating a machine learning algorithm to detect the current errors and train a new model to be deployed on the lyrics dataset. This was not essential to complete the project, as the 500 word list could be cleaned by hand in a more expedient manner than creating a learning model. However, for future projects a new model for SpaCy Spanish would be useful.
+1. The SpaCy parts of speech tagger had errors, particularly with compound words that are more frequently found in Spanish than English. For example, the word ‘dimelo’—translation: give it to me—was tagged as a noun. SpaCy language models ****
+ stoped here
+ has a built-in feature to update a language's part of speech tagger
+
+The lyrics dataset required additional cleaning, which could be achieved by creating a machine learning algorithm to detect the current errors and train a new model to be deployed on the lyrics dataset. This was not essential to complete the project, as the 500 word list could be cleaned by hand in a more expedient manner than creating a learning model. However, for future projects a new model for SpaCy Spanish would be useful.
     - >UPDATED: It was relatively easy to create a custom tag map for this project by training SpaCy’s part-of-speech tagger. The model required only a handful of examples, which were taken from the above Spanish_Words_Dataset notebook under text cleaning. The training examples required custom tags and needed to be mapped to a dependency dictionary. While verbs were lemmatized in the Lyrics corpus, the newly rendered verbs that were previously tagged incorrectly did not have a major impact on the overall Spanish word corpus. However, being able to train SpaCy model is an excellent feature to have to increase accuracy. 
     
 2. While the initial project was to analyze word frequencies, parts of speech, and come up with a list of common words, a spin-off project could be undertaken on the meaning of the lyrics. Creating a sentiment analysis classifier for the song lyrics would be interesting. It would require building a sentiment classifier, polarity or subjectivity, for Spanish. One could also build a classifier for emotion detection using Scikit-learn. This spin-off project will be added as it develops. 
