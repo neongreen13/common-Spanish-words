@@ -38,35 +38,35 @@ The project compared an abbreviated list of 100, 250, and 500 Spanish words crea
 
 Detailed findings from the comparison are as follows:
 
-•	There were only 105 word similarities between the 250 Lyrics corpus and the original 250 Spanish key. Stop words were not removed. Based on word frequency, the lists were not very similar.
-•	The Lyrics corpus had to be cleaned to exclude English words, numbers, and artist names. This corpus did not include lemmatized nouns and verbs, thus containing similar and/or repetitive word forms. The Lyrics corpus also contained a handful of nouns that refer to sex, love, and relationships. For example, heart, love, lips, body, kiss, mouth, bed, etc. These words accounted for 25 of the 149 word differences between the Lyrics corpus and Spanish key (16.7%).
-•	The Spanish key included 56 verbs out of the 147 word difference (38%) that were not present in the 250 word Lyrics corpus. This supports the hypothesis that the Spanish key was compiled from/for a classroom-style learning format.
-•	When the two Spanish word corpora from Wikipedia were compared, out of 100 words, the two lists contained 34 different words (34%). Comparing the differences was more revealing than the similarities. The first Spanish word corpus did not have its verbs lemmatized into the infinitive form, thus containing multiple tenses and conjugations. The second Spanish word corpus contained only verb infinitives, and 22 of the 36 differences were verb infinitives (61%).
-•	Comparing a second abbreviated 100-word Lyrics corpus to the first Spanish word corpus from Wikipedia, the two lists had 59 similarities. The main differences were nouns, same as mentioned above. Interestingly, the first Spanish word corpus had nouns such as government and country, words found in the news or formal writing.
-•	The 100-word Lyrics corpus was less similar to the second Spanish word corpus, containing only 49 similarities.
+- There were only 105 word similarities between the 250 Lyrics corpus and the original 250 Spanish key. Stop words were not removed. Based on word frequency, the lists were not very similar.
+- The Lyrics corpus had to be cleaned to exclude English words, numbers, and artist names. This corpus did not include lemmatized nouns and verbs, thus containing similar and/or repetitive word forms. The Lyrics corpus also contained a handful of nouns that refer to sex, love, and relationships. For example, heart, love, lips, body, kiss, mouth, bed, etc. These words accounted for 25 of the 149 word differences between the Lyrics corpus and Spanish key (16.7%).
+- The Spanish key included 56 verbs out of the 147 word difference (38%) that were not present in the 250 word Lyrics corpus. This supports the hypothesis that the Spanish key was compiled from/for a classroom-style learning format.
+- When the two Spanish word corpora from Wikipedia were compared, out of 100 words, the two lists contained 34 different words (34%). Comparing the differences was more revealing than the similarities. The first Spanish word corpus did not have its verbs lemmatized into the infinitive form, thus containing multiple tenses and conjugations. The second Spanish word corpus contained only verb infinitives, and 22 of the 36 differences were verb infinitives (61%).
+- Comparing a second abbreviated 100-word Lyrics corpus to the first Spanish word corpus from Wikipedia, the two lists had 59 similarities. The main differences were nouns, same as mentioned above. Interestingly, the first Spanish word corpus had nouns such as government and country, words found in the news or formal writing.
+- The 100-word Lyrics corpus was less similar to the second Spanish word corpus, containing only 49 similarities.
 
 Next, the project compared the value counts of the separate parts of speech to the total Lyrics word corpus. 
 
-•	26,977 total words in the lyrics corpus, 26,106 without English stop words. When segmented into the parts of speech, SpaCy returned 26,000 words.
-•	9,843 lemmatized nouns, 6,705 lemmatized verbs, 8,022 adverbs and adjectives, 733 stop words, 445 pronouns, and 252 conjunctives.
-•	Nouns were 37.85%, 25.78% verbs, 30.85% adverbs and adjectives, 2.8% stop words, 1.7% pronouns, and 0.9% conjunctives.
-•	Of a list continuing 500 words, the share of nouns would be 189.25, 128.9 verbs, 154.25 adverbs and adjectives, 14 stop words, 8.5 pronouns, and 4.5 conjunctives.
-•	The share of the totals were displayed in a Seaborn chart.
+- 26,977 total words in the lyrics corpus, 26,106 without English stop words. When segmented into the parts of speech, SpaCy returned 26,000 words.
+- 9,843 lemmatized nouns, 6,705 lemmatized verbs, 8,022 adverbs and adjectives, 733 stop words, 445 pronouns, and 252 conjunctives.
+- Nouns were 37.85%, 25.78% verbs, 30.85% adverbs and adjectives, 2.8% stop words, 1.7% pronouns, and 0.9% conjunctives.
+- Of a list continuing 500 words, the share of nouns would be 189.25, 128.9 verbs, 154.25 adverbs and adjectives, 14 stop words, 8.5 pronouns, and 4.5 conjunctives.
+- The share of the totals were displayed in a Seaborn chart.
 
 - https://github.com/yellow11marie/common-Spanish-words/blob/master/Spanish_Analysis.ipynb
 
 # Data Visualization
 The project used data visualizations at various stages and can be found in the following:
-•	Under the songs list, the most influential artists were displayed and compared by number of top songs in matplotlib and seaborn.
-•	Under text analysis, SpaCy has a built-in display. This was customized for the different parts of speech (nouns, verbs, stop words, etc.) within the lyrics.
-•	Under text cleaning, each part of speech was displayed in a separate Word Cloud.
-•	Under analysis, the common Spanish words were displayed in bar charts.
+- Under the songs list, the most influential artists were displayed and compared by number of top songs in matplotlib and seaborn.
+- Under text analysis, SpaCy has a built-in display. This was customized for the different parts of speech (nouns, verbs, stop words, etc.) within the lyrics.
+- Under text cleaning, each part of speech was displayed in a separate Word Cloud.
+- Under analysis, the common Spanish words were displayed in bar charts.
 
 
 # Conclusion and Applications for Spanish Learners
 Hypothesis vs Findings:
-•	Compiling lyrics will render a useful set of 250-300 most commonly used Spanish words 
-    o	UPDATED: The Lyrics corpus was expanded to a comprehensive list of 500 common Spanish words broken down into lemmatized nouns, lemmatized verbs, stop words, pronouns, adjectives and adverbs, and conjunctions by their share of words found in the total lyrics word corpus.
+- Compiling lyrics will render a useful set of 250-300 most commonly used Spanish words 
+    - ->UPDATED: The Lyrics corpus was expanded to a comprehensive list of 500 common Spanish words broken down into lemmatized nouns, lemmatized verbs, stop words, pronouns, adjectives and adverbs, and conjunctions by their share of words found in the total lyrics word corpus.
 •	The assumption is that the lyrics corpus will have limitations, namely that it does not include nouns that are essential for traveling - ordering food, transportation, greetings, etc. These topics will need to be learned in addition to the list if traveling to a Spanish speaking country, but not necessarily relevant to having a conversation with a Spanish speaker. 
     o	UPDATED: True. Additional nouns would be beneficial for travel.
 •	The lyrics corpus will have a greater percent of words related to love, sex, and relationships, as these are often the topic of songs. 
