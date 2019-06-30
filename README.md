@@ -1,6 +1,9 @@
 # Common Spanish Words
 A learning tool to study the most frequently used Spanish words found in song lyrics as a way for non-Spanish speakers to learn the language in an efficient manner.
 
+# Data Science Tools
+Webscraping, Beautiful Soup, natural language processing, Spanish, text cleaning, NLTK, SpaCy, parts of speech tags, named entity recognition, feature extraction, lemmatization, Word Cloud, bag of words, Matplotlib/Seaborn
+
 # Background
 With thousands of words, the thought of learning another language can be daunting and overwhelming. Based on Tim Ferris' article, 12 Rules for Learning Foreign Languages in Record Time — The Only Post You’ll Ever Need (https://tim.blog/2014/03/21/how-to-learn-a-foreign-language-2/), the first rule is to focus one's time on learning the most common words in a new language. Ferris says, "20% of the effort you spend on acquiring new vocab could ultimately give you 80% comprehension in a language—for instance, in English just 300 words make up 65% of all written material. We use those words a lot, and that’s the case in every other language as well." This project will create a data-driven learning tool by identifying the most commonly used Spanish words found in Latin songs.
 
