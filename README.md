@@ -12,18 +12,18 @@ The first dataset was a word corpus of 250 Spanish words from a Spanish learning
 The first 100-word corpus was an abbreviated list that was compiled by the Real Academia Española (RAE) to form a Reference Corpus of Current Spanish. The full list contains 160 million-word forms and was created from books, magazines, and newspapers with a wide variety of content, as well as transcripts of spoken language from radio and television broadcasts and other sources (published in June 2008).
 
 The second 100-word corpus was an abbreviated list that was created by Mark Davies at Brigham Young University in 2006. It contains 20 million words compiled from 20th-century sources. About one-third (~6,750,000 words) come from transcripts of spoken Spanish: conversations, interviews, lectures, sermons, press conferences, sports broadcasts, and others.
-- https://github.com/yellow11marie/common-Spanish-words/blob/master/Spanish_Key_Updated.ipynb
+- Spanish_Key_Updated.ipynb
 
 # Collecting the Data 
 Listening to music in a foreign language is an excellent way to deepen one’s listening comprehension as well as expand one's vocabulary. Lyrics from Latin songs are available online and relatively easy to download to form a Spanish word dataset. 
 
 The data collection phase, first, consisted of downloading the names of Latin songs from Billboard.com. Each year, Billboard.com releases a list of the top 50 Latin songs, and from 2006 to 2018, the project collected 1,056 song names (there were no songs listed prior to 2006). To collect the song names, the project created a function that looped through all years and returned the artist name, rank, song title, and year into a data frame.   
-- https://github.com/yellow11marie/common-Spanish-words/blob/master/Songs_List.ipynb
+- Songs_List.ipynb
 
 Tangentially, the project ran descriptive statistics on the most influential Latin artists. It returned value counts for the number of songs that each solo artist produced between 2006 and 2018 and plotted the artists in charts using Matplotlib and Seaborn. The top artist was La Arrolladora Banda el Limon de Rene Camacho with 22 songs appearing on the charts in the top 50 list by year, accounting for 2.08 percent of the share of total songs in 12 years. When the top 20 artists were segmented out, La Arrolladora Banda accounted for 7.91 percent of the total share of songs out of 20 artists. The project ran value counts for the number of times the top 20 artists appeared on the charts as a solo artist as well as a collaborator on other songs. Daddy Yankee was the top collaboration artist appearing in 43 songs, accounting for 10.51 percent of the share of the top 20 artists. 
 
 The second phase of data collection consisted of downloading the lyrics for all 1,056 Latin songs from Genius.com. The project created a function that looped through all the years, song title, and artist and returned various data points, including lyrics, release year, artist, collaborator, etc., in a data frame.  
-- https://github.com/yellow11marie/common-Spanish-words/blob/master/Lyrics_Genius_All.ipynb
+- Lyrics_Genius_All.ipynb
 
 # Text Cleaning 
 From the dataset of song lyrics, the project cleaned and processed the lyrics text for analysis. It performed initial descriptive statistics on the lyrics and returned the number of capitalized words, numerals, word count, unique word count, and character count for each song. In a column for clean lyrics, the project removed punctuation, numbers, consecutive duplicate words, the artists' names, and made the words lower case. English songs and words also had to be removed. 
@@ -31,7 +31,7 @@ From the dataset of song lyrics, the project cleaned and processed the lyrics te
 From all 1,056 songs, the dataset returned a list of 26,977 Spanish words in total to form the basis of this project’s Spanish word corpus. 
 
 Next, the project separated the lyrics into the different parts of speech using the national language processor, SpaCy, to identify nouns, verbs, pronouns, stop words, etc. SpaCy was also used to lemmatize the nouns and verbs. Lemmatization is the process of reducing nouns to their singular form, thus dropping the plural form as a duplicate, and retaining only the root infinitive verb by discarding various conjugations. The project ran value counts on each part of speech and rendered 6,705 lemmatized verbs (down from 10,264 verb forms), 9,843 lemmatized nouns (down from 11,110), 8,022 adverbs and adjectives, 733 stop words, 445 pronouns, and 252 conjunctives. Separate word clouds display the prominence of each part of speech. 
-- https://github.com/yellow11marie/common-Spanish-words/blob/master/Spanish_Words_Dataset.ipynb 
+- Spanish_Words_Dataset.ipynb 
 
 # Analysis of Findings
 The project compared an abbreviated list of 100, 250, and 500 Spanish words created from lyrics to the 250-word Spanish key and both 100-word Spanish corpora from Wikipedia. The project converted each dataset into a bag of words for side by side comparison and returned their similarities and differences. 
@@ -53,7 +53,7 @@ Next, the project compared the value counts of the separate parts of speech to t
 - Of a list continuing 500 words, the share of nouns would be 189.25, 128.9 verbs, 154.25 adverbs and adjectives, 14 stop words, 8.5 pronouns, and 4.5 conjunctives.
 - The share of the totals were displayed in a Seaborn chart.
 
-- https://github.com/yellow11marie/common-Spanish-words/blob/master/Spanish_Analysis.ipynb
+- Spanish_Analysis.ipynb
 
 # Data Visualization
 The project used data visualizations at various stages and can be found in the following:
@@ -77,6 +77,8 @@ RESULT:
 
 Supporting Data
 - To supplement the 500 Spanish word list (or unigram), additional ngrams were run on the lyrics word corpus, including bigrams, trigram, and quadrigrams all the way up to decagram. Ngram lists ere compared with stop words and without. Additional text cleaning was required. The songs needed to be divided into up by the chorus and verses, and duplicate sections needed to be removed for a more accurate understanding of common ngrams. The supplemental data analysis rendered additional lists of word patterns consisting of two, three, four, and more words. This is a potential basis for a language teaching model.
+
+- N-grams.ipynb
 
 # Further Analysis
 1.	The SpaCy parts of speech tagger had errors, particularly with compound words that are more frequently found in Spanish than English. For example, the word ‘dimelo’—translation: give it to me—was tagged as a noun. 
