@@ -66,22 +66,22 @@ The project used data visualizations at various stages and can be found in the f
 # Conclusion and Applications for Spanish Learners
 Hypothesis vs Findings:
 - Compiling lyrics will render a useful set of 250-300 most commonly used Spanish words 
-    - ->UPDATED: The Lyrics corpus was expanded to a comprehensive list of 500 common Spanish words broken down into lemmatized nouns, lemmatized verbs, stop words, pronouns, adjectives and adverbs, and conjunctions by their share of words found in the total lyrics word corpus.
-•	The assumption is that the lyrics corpus will have limitations, namely that it does not include nouns that are essential for traveling - ordering food, transportation, greetings, etc. These topics will need to be learned in addition to the list if traveling to a Spanish speaking country, but not necessarily relevant to having a conversation with a Spanish speaker. 
-    o	UPDATED: True. Additional nouns would be beneficial for travel.
-•	The lyrics corpus will have a greater percent of words related to love, sex, and relationships, as these are often the topic of songs. 
-    o	UPDATED: True. These words remain important to learn as they are frequently used in conversations. 
+    - UPDATED: The Lyrics corpus was expanded to a comprehensive list of 500 common Spanish words broken down into lemmatized nouns, lemmatized verbs, stop words, pronouns, adjectives and adverbs, and conjunctions by their share of words found in the total lyrics word corpus.
+- The assumption is that the lyrics corpus will have limitations, namely that it does not include nouns that are essential for traveling - ordering food, transportation, greetings, etc. These topics will need to be learned in addition to the list if traveling to a Spanish speaking country, but not necessarily relevant to having a conversation with a Spanish speaker. 
+    - UPDATED: True. Additional nouns would be beneficial for travel.
+- The lyrics corpus will have a greater percent of words related to love, sex, and relationships, as these are often the topic of songs. 
+    - UPDATED: True. These words remain important to learn as they are frequently used in conversations. 
 
 RESULT:
-•	Start studying the 500 Spanish word list today. Supplement your learning with travel vocabulary and learn the conjugations of common verbs. More importantly, listen to Latin music while you’re learning. 
+- Start studying the 500 Spanish word list today. Supplement your learning with travel vocabulary and learn the conjugations of common verbs. More importantly, listen to Latin music while you’re learning. 
 
 Supporting Data
-•	To supplement the 500 Spanish word list (or unigram), additional ngrams were run on the lyrics word corpus, including bigrams, trigram, and quadrigrams all the way up to decagram. Ngram lists ere compared with stop words and without. Additional text cleaning was required. The songs needed to be divided into up by the chorus and verses, and duplicate sections needed to be removed for a more accurate understanding of common ngrams. The supplemental data analysis rendered additional lists of word patterns consisting of two, three, four, and more words. This is a potential basis for a language teaching model.
+- To supplement the 500 Spanish word list (or unigram), additional ngrams were run on the lyrics word corpus, including bigrams, trigram, and quadrigrams all the way up to decagram. Ngram lists ere compared with stop words and without. Additional text cleaning was required. The songs needed to be divided into up by the chorus and verses, and duplicate sections needed to be removed for a more accurate understanding of common ngrams. The supplemental data analysis rendered additional lists of word patterns consisting of two, three, four, and more words. This is a potential basis for a language teaching model.
 
 # Further Analysis
 1.	The SpaCy parts of speech tagger had errors, particularly with compound words that are more frequently found in Spanish than English. For example, the word ‘dimelo’—translation: give it to me—was tagged as a noun. 
-    o	UPDATED: At the time of this writing, SpaCy does not have a function to update only a set of words and add to the existing language model. To update the errors in compound words with a verb stem, an entire new Spanish model would need to be added. 
+    - UPDATED: At the time of this writing, SpaCy does not have a function to update only a set of words and add to the existing language model. To update the errors in compound words with a verb stem, an entire new Spanish model would need to be added. 
 
 2.	While the initial project was to analyze word frequencies and parts of speech, a spin-off project could be undertaken on the meaning of the lyrics. Creating a sentiment analysis classifier for the song lyrics would be fascinating. It would require building a sentiment classifier, polarity or subjectivity, for Spanish. One could also build a topic modeler for emotion detection using Scikit-learn. 
-    o	UPDATED: While NLTK/TexBlob has a built-in sentiment analyzer for the English language, there is not one for Spanish at the time of this writing. A custom Spanish sentiment analyzer would need to be built and individually tagged 10,000-20,000 sentences with sentiment. This could be achieved by compiling a new dataset from social media, Twitter or Facebook. Potential issues could be the presence of slang, differing sentiment or meaning between dialects, and the level of specificity required for a sentiment analyzer or topic modeler. 
+    - UPDATED: While NLTK/TexBlob has a built-in sentiment analyzer for the English language, there is not one for Spanish at the time of this writing. A custom Spanish sentiment analyzer would need to be built and individually tagged 10,000-20,000 sentences with sentiment. This could be achieved by compiling a new dataset from social media, Twitter or Facebook. Potential issues could be the presence of slang, differing sentiment or meaning between dialects, and the level of specificity required for a sentiment analyzer or topic modeler. 
 
